@@ -1,4 +1,4 @@
-package com.eduacandoweb.course.resources;
+package com.educandoweb.course.resources;
 
 import java.util.List;
 
@@ -9,24 +9,24 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eduacandoweb.course.entities.User;
-import com.eduacandoweb.course.services.UserService;
+import com.educandoweb.course.entities.Order;
+import com.educandoweb.course.services.OrderService;
 
 @RestController
-@RequestMapping(value = "/Users")
-public class UserResource {
+@RequestMapping(value = "/Orders")
+public class OrderResource {
 
 	@Autowired
-	private UserService service;
+	private OrderService service;
 	@GetMapping
 	public ResponseEntity<List> findAll(){
-		List<User> list = service.findAll();
+		List<Order> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	} 
 	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<User> findById(@PathVariable Integer id){
-		User obj = service.findById(id);
+	public ResponseEntity<Order> findById(@PathVariable Integer id){
+		Order obj = service.findById(id);
 		return ResponseEntity.ok().body(obj);
 	}
 	

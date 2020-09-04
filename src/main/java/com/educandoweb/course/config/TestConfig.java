@@ -1,4 +1,4 @@
-package com.eduacandoweb.course.config;
+package com.educandoweb.course.config;
 
 import java.time.Instant;
 
@@ -9,15 +9,15 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import com.eduacandoweb.course.entities.Category;
-import com.eduacandoweb.course.entities.Order;
-import com.eduacandoweb.course.entities.Product;
-import com.eduacandoweb.course.entities.User;
-import com.eduacandoweb.course.entities.enums.OrderStatus;
-import com.eduacandoweb.course.repositories.CategoryRepository;
-import com.eduacandoweb.course.repositories.OrderRepository;
-import com.eduacandoweb.course.repositories.ProductRepository;
-import com.eduacandoweb.course.repositories.UserRepository;
+import com.educandoweb.course.entities.Category;
+import com.educandoweb.course.entities.Order;
+import com.educandoweb.course.entities.Product;
+import com.educandoweb.course.entities.User;
+import com.educandoweb.course.entities.enums.OrderStatus;
+import com.educandoweb.course.repositories.CategoryRepository;
+import com.educandoweb.course.repositories.OrderRepository;
+import com.educandoweb.course.repositories.ProductRepository;
+import com.educandoweb.course.repositories.UserRepository;
 
 @Configuration
 @Profile("test")
@@ -50,8 +50,7 @@ public class TestConfig implements CommandLineRunner {
 		categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
 		productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
 
-		p1.getCategories().add(cat2);
-		p2.getCategories().add(cat1);
+		p1.getCategories().add(cat1);
 		p2.getCategories().add(cat3);
 		p3.getCategories().add(cat3);
 		p4.getCategories().add(cat3);

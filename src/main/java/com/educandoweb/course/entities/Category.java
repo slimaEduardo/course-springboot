@@ -1,6 +1,7 @@
-package com.eduacandoweb.course.entities;
+package com.educandoweb.course.entities;
 
 import java.io.Serializable;
+
 
 import java.util.HashSet;
 import java.util.Set;
@@ -34,7 +35,7 @@ public class Category implements Serializable{
 	}
 
 	public Category(Integer id, String name) {
-
+		super();
 		this.id = id;
 		this.name = name;
 	}

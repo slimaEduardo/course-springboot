@@ -1,4 +1,4 @@
-package com.eduacandoweb.course.entities;
+package com.educandoweb.course.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -11,7 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.eduacandoweb.course.entities.enums.OrderStatus;
+import com.educandoweb.course.entities.enums.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
