@@ -24,6 +24,9 @@ public class OrderItemPk implements Serializable{
 	private Product product;
 	
 	
+	public OrderItemPk() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	public Order getOrder() {
 		return order;
@@ -42,6 +45,7 @@ public class OrderItemPk implements Serializable{
 		this.order = order;
 		this.product = product;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
